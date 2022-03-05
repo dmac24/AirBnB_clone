@@ -4,8 +4,9 @@
 import cmd
 import models
 
+
 class HBNBCommand(cmd.Cmd):
-    """ HBNH console """
+    """ console """
     prompt = '(hbnb)'
 
     def do_EOF(self, arg):
@@ -19,6 +20,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, arg):
         """ Exit the program """
         return True
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

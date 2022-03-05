@@ -7,7 +7,9 @@ import uuid
 
 class BaseModel:
     """Define attributes class from future classes will be derived"""
-time = "%Y-%m-%dT%H:%M:%S.%f"
+
+    time = "%Y-%m-%dT%H:%M:%S.%f"
+
     def __init__(self, *args, **kwargs):
         """Initialization of the base model"""
         if kwargs:
@@ -24,7 +26,7 @@ time = "%Y-%m-%dT%H:%M:%S.%f"
     def __str__(self):
         """Representation of the BaseModel class"""
         return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
-                                           self.__dict__)
+                                         self.__dict__)
 
     def save(self):
         """updates the attribute 'updated_at' with the current datetime"""
