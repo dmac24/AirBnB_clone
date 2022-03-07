@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" console """
+""" Console module package"""
 
 import cmd
-from logging import exception
 import os
 import shlex
 
