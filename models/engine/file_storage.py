@@ -1,23 +1,27 @@
 #!/usr/bin/python3
-
+"""File Storage module"""
 
 import json
 
 
 class FileStorage():
+    """Class File storage"""
 
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
+        """all"""
         return self.__objects
 
     def new(self, obj):
+        """new"""
         if obj:
             key = obj.__class__.__name__ + '.' + obj.id
             self.__objects[key] = obj
 
     def save(self):
+        """save"""
         to_json = {}
         if self.__objects is None:
             return
@@ -29,6 +33,7 @@ class FileStorage():
             json.dump(to_json, f)
 
     def reload(self):
+        """ Reloads """
         from models.amenity import Amenity
         from models.base_model import BaseModel
         from models.city import City
