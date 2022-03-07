@@ -34,6 +34,7 @@ class FileStorage():
 
     def reload(self):
         """ Reloads """
+
         from models.amenity import Amenity
         from models.base_model import BaseModel
         from models.city import City
@@ -41,6 +42,7 @@ class FileStorage():
         from models.review import Review
         from models.state import State
         from models.user import User
+
         try:
             with open(self.__file_path, 'r') as f:
                 for key, value in (json.load(f)).items():
