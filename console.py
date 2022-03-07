@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-Console module package manage classes for the program
-"""
+""" Console module package manage classes """
 
 import cmd
 import os
 import shlex
-
 from attr import attr
-# import models
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
