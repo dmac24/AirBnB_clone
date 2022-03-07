@@ -2,7 +2,6 @@
 """ Console module package manage classes """
 
 import cmd
-import os
 import shlex
 from attr import attr
 from models.base_model import BaseModel
@@ -21,6 +20,7 @@ dict_class = {"BaseModel": BaseModel(), "User": User(), "State": State(),
 
 class HBNBCommand(cmd.Cmd):
     """ Console creation class """
+
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
@@ -28,19 +28,16 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """ overwriting the emptyline """
+        """ Overwriting the emptyline """
         pass
 
     def do_quit(self, arg):
         """ Exit the program """
         return True
 
-    def do_clear(self, arg):
-        """Clear command"""
-        os.system('clear')
-
     def do_create(self, arg):
         """Create a New Object"""
+
         if arg in dict_class:
             new_var = "{}()".format(arg)
             new_item = eval(new_var)
@@ -53,6 +50,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, arg):
         """Show an object"""
+
         if len(arg) == 0:
             print("** class name missing **")
             return
@@ -72,6 +70,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """Under Development"""
+
         if len(arg) == 0:
             print("** class name missing **")
             return
@@ -90,6 +89,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Print all objects"""
+
         recuento = storage.all()
         new_list = []
         if len(arg) == 0:
@@ -107,6 +107,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, arg):
         """Update an object"""
+
         if len(arg) == 0:
             print("** class name missing **")
             return
