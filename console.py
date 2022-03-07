@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Console module package"""
+"""
+Console module package manage classes for the program
+"""
 
 import cmd
 import os
@@ -22,7 +24,7 @@ dict_class = {"BaseModel": BaseModel(), "User": User(), "State": State(),
 
 
 class HBNBCommand(cmd.Cmd):
-    """ console """
+    """ Console creation class """
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
