@@ -18,7 +18,7 @@ from models.review import Review
 from models import storage
 
 dict_class = {"BaseModel": BaseModel(), "User": User(), "State": State(),
-              "City": City(), "Amenity": Amenity(), "Place": Place(), 
+              "City": City(), "Amenity": Amenity(), "Place": Place(),
               "Review": Review()}
 
 
@@ -134,6 +134,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
             return
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

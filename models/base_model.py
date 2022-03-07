@@ -5,9 +5,9 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel:
     """Define attributes class from future classes will be derived"""
-
 
     def __init__(self, *args, **kwargs):
         """Initialization of the base model"""
