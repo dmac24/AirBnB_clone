@@ -84,6 +84,7 @@ class HBNBCommand(cmd.Cmd):
         recuento = storage.all()
         if new_str in recuento.keys():
             recuento.pop(new_str)
+            storage.save()
         else:
             print("** no instance found **")
 
