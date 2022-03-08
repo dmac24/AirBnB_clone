@@ -53,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 0:
             print("** class name missing **")
             return
-        splitted_arg = arg.split()
+        splitted_arg = shlex.split(arg)
         if splitted_arg[0] not in dict_class:
             print("** class doesn't exist **")
             return
