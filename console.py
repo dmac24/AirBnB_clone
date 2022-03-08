@@ -57,7 +57,7 @@ class HBNBCommand(cmd.Cmd):
         if splitted_arg[0] not in dict_class:
             print("** class doesn't exist **")
             return
-        if len(splitted_arg[1]) == 0:
+        if len(splitted_arg) < 2:
             print("** instance id missing **")
             return
         new_str = "{}.{}".format(splitted_arg[0], splitted_arg[1])
@@ -77,8 +77,9 @@ class HBNBCommand(cmd.Cmd):
         if splitted_arg[0] not in dict_class:
             print("** class doesn't exist **")
             return
-        if len(splitted_arg[1]) == 0:
+        if len(splitted_arg) < 2:
             print("** instance id missing **")
+            return
         new_str = "{}.{}".format(splitted_arg[0], splitted_arg[1])
         recuento = storage.all()
         if new_str in recuento.keys():
