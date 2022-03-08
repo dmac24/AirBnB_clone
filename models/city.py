@@ -5,9 +5,11 @@ from models.base_model import BaseModel
 
 class City(BaseModel):
     """ City """
+    
+    name = ""
+    state_id = ""
+
     def __init__(self, *args, **kwargs):
         """ initialize """
-        if len(kwargs) == 0:
-            self.name = ""
-            self.state_id = ""
+
         super().__init__(*args, **kwargs)
