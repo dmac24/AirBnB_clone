@@ -4,12 +4,14 @@ from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """ user """
+    """ User creation class """
+
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""
+
     def __init__(self, *args, **kwargs):
-        """ initialize"""
-        if len(kwargs) == 0:
-            self.email = ""
-            self.password = ""
-            self.first_name = ""
-            self.last_name = ""
+        """ Initialize """
+
         super().__init__(*args, **kwargs)
