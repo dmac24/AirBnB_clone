@@ -4,7 +4,7 @@
     height: 70px;
     width: 100%;
     border: 1px #DDDDDD solid;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 4px;
     justify-content: right;
     align-items: center;
 }
@@ -14,11 +14,13 @@
     color: #FFFFFF;
     height: 48px;
     width: 20%;
-    border-radius: 4px 4px 4px 4px;
+    border: 0px;
+    border-radius: 4px;
     text-align: center;
     float: right;
     margin: 11px 40px 11px 0px;
 }
+
 .filters button:hover{
     opacity: 0.9;
 }
